@@ -1,4 +1,4 @@
-# CV Generator - Daniel Deusing / twiceD Technology GmbH
+# CV Generator - twiceD Technology GmbH
 
 This repository generates professional CV documents in German and English for twiceD Technology GmbH.
 
