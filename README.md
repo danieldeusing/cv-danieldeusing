@@ -45,14 +45,13 @@ Always use these exact color values:
 ```
 ├── create_cv_de.js      # German CV generator
 ├── create_cv_en.js      # English CV generator
-├── create_icons.js      # Social media icon generator (utility)
 ├── logo/                # Brand assets
 │   ├── blue_D_1E3A5F.png   # Main logo (primary color)
 │   ├── white_D.png         # White logo variant
 │   ├── github_icon.png     # Social icons
 │   ├── linkedin_icon.png
 │   └── xing_icon.png
-├── package.json         # Dependencies (docx, sharp)
+├── package.json         # Dependencies (docx)
 └── README.md            # This file
 ```
 
@@ -125,8 +124,7 @@ new TableRow({ children: [
 ```json
 {
   "dependencies": {
-    "docx": "^9.x",
-    "sharp": "^0.33.x"
+    "docx": "^9.x"
   }
 }
 ```
