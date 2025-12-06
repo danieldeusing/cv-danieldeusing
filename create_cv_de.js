@@ -28,10 +28,10 @@ const doc = new Document({
         paragraph: { spacing: { after: 200 } } },
       { id: "SectionHeader", name: "SectionHeader", basedOn: "Normal",
         run: { size: 26, bold: true, color: BRAND.primary, font: "Nunito", allCaps: true },
-        paragraph: { spacing: { before: 400, after: 200 } } },
+        paragraph: { spacing: { before: 400, after: 150 } } },
       { id: "ProjectTitle", name: "ProjectTitle", basedOn: "Normal",
         run: { size: 24, bold: true, color: BRAND.dark, font: "Nunito" },
-        paragraph: { spacing: { before: 200, after: 60 } } },
+        paragraph: { spacing: { before: 340, after: 60 } } },
       { id: "CompanyRole", name: "CompanyRole", basedOn: "Normal",
         run: { size: 22, color: BRAND.accent, font: "Nunito" },
         paragraph: { spacing: { after: 60 } } },
@@ -140,8 +140,11 @@ const doc = new Document({
 
       // === TWICED ===
       new Paragraph({ style: "SectionHeader", children: [new TextRun("twiceD Technology GmbH")] }),
-      new Paragraph({ spacing: { after: 200 }, children: [
-        new TextRun({ text: "twiceD Technology GmbH ist ein Softwareunternehmen mit Sitz in Deutschland, spezialisiert auf maßgeschneiderte Entwicklungslösungen für Industrie und Unternehmen. Wir realisieren komplette Projekte oder unterstützen Kundenteams mit erfahrenen Entwicklern in den Bereichen IoT, Embedded Systems, Enterprise-Software und Full-Stack-Entwicklung. Das folgende Mitarbeiterprofil stellt einen unserer Experten vor, der für Ihr Projekt zur Verfügung steht. Eine vollständige Projektübersicht befindet sich derzeit im Aufbau unter ", font: "Nunito", size: 22 }),
+      new Paragraph({ children: [
+        new TextRun({ text: "twiceD Technology GmbH ist ein Softwareunternehmen mit Sitz in Deutschland, spezialisiert auf maßgeschneiderte Entwicklungslösungen für Industrie und Unternehmen. Wir realisieren komplette Projekte oder unterstützen Kundenteams mit erfahrenen Entwicklern in den Bereichen IoT, Embedded Systems, Enterprise-Software und Full-Stack-Entwicklung. Das folgende Mitarbeiterprofil stellt einen unserer Experten vor.", font: "Nunito", size: 22 })
+      ]}),
+      new Paragraph({ spacing: { after: 60 }, children: [
+        new TextRun({ text: "Eine vollständige Projektübersicht befindet sich derzeit im Aufbau unter ", font: "Nunito", size: 22 }),
         new ExternalHyperlink({ link: "https://twiced-homepage.daniel-deusing.workers.dev/", children: [
           new TextRun({ text: "twiced-homepage.daniel-deusing.workers.dev", font: "Nunito", color: BRAND.primary, size: 22 })
         ]}),
@@ -153,7 +156,7 @@ const doc = new Document({
       new Paragraph({ children: [
         new TextRun({ text: "Ergebnisorientierter Software-Ingenieur mit ", font: "Nunito" }),
         new TextRun({ text: "über 13 Jahren Erfahrung", bold: true, font: "Nunito" }),
-        new TextRun({ text: " in Full-Stack-Entwicklung, IoT, Embedded Systems und Enterprise-Software. Nachgewiesene Erfolge in der Leitung von Entwicklungsteams und der Bereitstellung missionskritischer Systeme für Kunden aus Automobil-, Verteidigungs- und Industriebranche. Kombiniert technische Hands-on-Expertise mit Führungskompetenz – von der Architekturplanung über die Implementierung bis zum Produktivbetrieb. Erfahrung in agilen, verteilten Teams und internationalen Projekten.", font: "Nunito" })
+        new TextRun({ text: " in Full-Stack-Entwicklung, IoT, Embedded Systems und Enterprise-Software. Nachgewiesene Erfolge in der Leitung von Entwicklungsteams und Bereitstellung missionskritischer Systeme für Automobil-, Verteidigungs- und Industriekunden. Stark im systematischen Debugging und der Root-Cause-Analyse komplexer Probleme. Erfahren im Code-Review mit Fokus auf Wissenstransfer und Teamentwicklung. Kombiniert technische Hands-on-Expertise mit Führungskompetenz – von der Architekturplanung über die Implementierung bis zum Produktivbetrieb. Kommunikationsstark in Deutsch, Englisch und Spanisch. Erfahrung in agilen, verteilten Teams und internationalen Projekten.", font: "Nunito" })
       ]}),
 
       // === TECHNISCHE FÄHIGKEITEN (moved to first page) ===
@@ -277,6 +280,7 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Architektur der Echtzeit-Datenpipeline vom Shared-Memory-Ringpuffer zum Web-Frontend", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Leitung eines 4-köpfigen Entwicklerteams; auch in LiRED (verwandte Plattform) eingesetzt", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Integration einer C-Bibliothek von LITEF für Hochleistungs-Shared-Memory-Zugriff", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Laufende Wartung: Sicherheitsupdates, Performance-Optimierungen und Fehlerbehebung", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Angular, Python, C, Shared Memory, Echtzeitsysteme", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -284,11 +288,12 @@ const doc = new Document({
 
       // Project: VU3 (2021 – heute)
       new Paragraph({ style: "ProjectTitle", children: [new TextRun("VU3 – Enterprise Fahrzeugverkaufsplattform (Volkswagen Group)")] }),
-      new Paragraph({ style: "CompanyRole", children: [new TextRun("Cloudflight GmbH / Porsche Informatik | Softwareentwickler & Architekt | 2021 – heute")] }),
+      new Paragraph({ style: "CompanyRole", children: [new TextRun("Cloudflight GmbH / Porsche Informatik GmbH | Softwareentwickler & Architekt | 2021 – heute")] }),
       new Paragraph({ children: [new TextRun({ text: "Beitrag zur zentralen Verkaufsplattform des VW-Konzerns für Händler in 28+ Ländern für Audi, VW, Skoda, Seat, Cupra und Porsche.", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Mitglied des Architekten-Teams; Problemlöser für komplexe technische Herausforderungen und Anforderungsanalyse", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Features in mehreren Modulen umgesetzt: Stocklist, Offer/Contract, DocFlow, Multi-Currency, Special Tax, Vehicle Management", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "2+ Jahre im SFO1-Team, jetzt in SFO4/SWP: VU3-Entwicklung plus Legacy-Wartung für noch nicht migrierte italienische Händler", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "2 Jahre SFO1-Team: Stocklist, Add-Ons, Buildability & Actuality Check, Salesperson Management, Performance Board, Vehicle Management, Contract Broker, Sales Folder", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "2+ Jahre SFO4-Team (laufend): Multi-Currency, Special Tax, Porsche Vehicle Integration, DocFlow Integration, Selections, Datahub", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "½+ Jahr SWP-Team (laufend): Legacy-Verkaufsanwendung Italien – Bug Fixing, Security-/Regulatory-Features, Wartung bis Migration 2027", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "2+ Jahre Technical Architecture Team (laufend): Domänenübergreifendes Team zur Definition der Gesamtsystemarchitektur", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Angular, Java, Spring Boot, Oracle SQL, Redis, Solr, SOAP, REST API, AWS", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -303,7 +308,7 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Zusammenarbeit mit PLC2 Hardware/FPGA-Team und 20+ Mercedes/Bosch-Ingenieuren", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
-        new TextRun({ text: "C, Linux Kernel, GigE Vision, FPGA-Integration", color: BRAND.gray, font: "Nunito", size: 18 })
+        new TextRun({ text: "C, Linux Kernel, GigE Vision", color: BRAND.gray, font: "Nunito", size: 18 })
       ]}),
 
       // Project: IHK eFaktura (2020 – heute)
@@ -312,6 +317,7 @@ const doc = new Document({
       new Paragraph({ children: [new TextRun({ text: "Leitung der Entwicklung eines elektronischen Rechnungssystems für IHK-Mitgliedsunternehmen.", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Leitung eines 3-köpfigen Teams für Rechnungsmanagement und SOAP-Integration", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Integration in bestehende IHK-Backend-Infrastruktur für nahtlosen Datenaustausch", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Laufende Wartung: Updates, Bugfixes und Erweiterungen nach Kundenfeedback", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Angular, Java, Spring Boot, MySQL, SOAP", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -323,6 +329,7 @@ const doc = new Document({
       new Paragraph({ children: [new TextRun({ text: "Leitung der Entwicklung einer Plattform zur Einreichung und Verwaltung von Prüfungsthemen.", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Kompletter Workflow für Themeneinreichung, Prüfung und Genehmigung entwickelt", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Gemeinsame Backend-Infrastruktur mit eFaktura; individuelles Angular-Frontend", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Laufende Wartung: Updates, Bugfixes und Erweiterungen nach Kundenfeedback", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Angular, Java, Spring Boot, MySQL, SOAP", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -337,7 +344,7 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Im Google Play Store veröffentlicht; laufende Wartung für Sicherheits- und Feature-Updates", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
-        new TextRun({ text: "Android, Java, Bluetooth LE, Material Design", color: BRAND.gray, font: "Nunito", size: 18 })
+        new TextRun({ text: "Android, Java, Bluetooth LE", color: BRAND.gray, font: "Nunito", size: 18 })
       ]}),
 
       // Project: PGC-1000 (2020)
@@ -359,6 +366,7 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Leitung eines Kernteams von 4 Entwicklern (8+ Mitwirkende) für Full-Stack-Plattform", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "LDAP-Integration, DATEV-Export und MS-Access-Datenmigration implementiert", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Intern bei twiceD im Einsatz; externe Kunden als SaaS bedient", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Laufende Wartung und Weiterentwicklung basierend auf Nutzerfeedback", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Java, Spring Boot, Angular, MySQL, Python, Docker, LDAP, DATEV", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -390,17 +398,17 @@ const doc = new Document({
       // Project: 4NEEDS (2018)
       new Paragraph({ style: "ProjectTitle", children: [new TextRun("4NEEDS – Influencer ICO Plattform")] }),
       new Paragraph({ style: "CompanyRole", children: [new TextRun("4NEEDS | Blockchain-Entwickler | 01/2018 – 10/2018")] }),
-      new Paragraph({ children: [new TextRun({ text: "Entwicklung einer ICO-Plattform für Influencer-Marketing auf der Stellar-Blockchain.", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Smart-Contract-Entwicklung auf Stellar-Netzwerk für Token-Emission und -Handel", font: "Nunito", size: 20 })] }),
+      new Paragraph({ children: [new TextRun({ text: "Entwicklung einer ICO-Plattform für Influencer-Marketing auf Blockchain-Basis.", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Smart-Contract-Entwicklung für Token-Emission und -Handel", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Full-Stack-Entwicklung: Angular-Frontend, Java-Backend, Python-Services", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Integration von Stellar SDK für Wallet-Verwaltung und Transaktionsabwicklung", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Integration von Blockchain-SDK für Wallet-Verwaltung und Transaktionsabwicklung", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
-        new TextRun({ text: "Stellar, Angular, Java, Python", color: BRAND.gray, font: "Nunito", size: 18 })
+        new TextRun({ text: "Blockchain, Angular, Java, Python", color: BRAND.gray, font: "Nunito", size: 18 })
       ]}),
 
       // Project: Obsidian (2017)
-      new Paragraph({ style: "ProjectTitle", children: [new TextRun("Obsidian – Embedded OS & Treiber für PLC2")] }),
+      new Paragraph({ style: "ProjectTitle", children: [new TextRun("Obsidian – Embedded OS & Treiber")] }),
       new Paragraph({ style: "CompanyRole", children: [new TextRun("PLC2 Design GmbH | Embedded-Entwickler | 08/2017 – 12/2017")] }),
       new Paragraph({ children: [new TextRun({ text: "Entwicklung eines kompletten Embedded-Linux-Systems für PLC2-Hardware mit Bootloader, Kernel und Treibern.", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Yocto-basiertes Linux-Image mit angepasstem Kernel und Device Tree für Xilinx Zynq", font: "Nunito", size: 20 })] }),
@@ -431,6 +439,7 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Native Android-App mit Bluetooth LE Beacon-Scanning und Trilateration zur Positionsbestimmung", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Integration von Push-Benachrichtigungen und Backend-Kommunikation für Echtzeit-Alarmierung", font: "Nunito", size: 20 })] }),
       new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Optimierung des Energieverbrauchs für dauerhaftes BLE-Scanning im Hintergrund", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Anbindung an externe Systeme für erweiterte Alarmierungs- und Monitoring-Funktionen", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Android, Java, Bluetooth LE, REST API", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -449,11 +458,10 @@ const doc = new Document({
 
       // Project: myHOA (2013 – 2014)
       new Paragraph({ style: "ProjectTitle", children: [new TextRun("myHOA – Smart Home Startup")] }),
-      new Paragraph({ style: "CompanyRole", children: [new TextRun("Eigenes Startup | Gründer & Entwickler | 03/2013 – 12/2014")] }),
-      new Paragraph({ children: [new TextRun({ text: "Gründung und technische Entwicklung eines Smart-Home-Systems mit selbst entwickeltem Gateway und integrierter Hausautomatisierung.", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Eigenentwickeltes Embedded-Linux-Gateway (Yocto) mit Multi-Protokoll-Unterstützung", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Gewinner: Baden-Württemberg Goes Mobile 2014 (Kategorie: Mobile Housemate 2.0)", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Gewinner: Regional Cup Elevator Pitch Baden-Württemberg 2013 (Südschwarzwald)", font: "Nunito", size: 20 })] }),
+      new Paragraph({ style: "CompanyRole", children: [new TextRun("Eigenes Startup | Co-Gründer | 03/2013 – 12/2014")] }),
+      new Paragraph({ children: [new TextRun({ text: "Mitgründung und technische Leitung eines Smart-Home-Startups mit eigenem Gateway und integrierter Hausautomatisierung.", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Eigenentwickeltes Embedded-Linux-Gateway (Yocto) mit Multi-Protokoll-Unterstützung (Z-Wave, EnOcean, DigitalSTROM, M-Bus, HomeMatic, ZigBee)", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Entwicklung der Backend-Infrastruktur und Cloud-Anbindung", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
         new TextRun({ text: "Yocto, C, Python, Android, REST API", color: BRAND.gray, font: "Nunito", size: 18 })
@@ -462,18 +470,17 @@ const doc = new Document({
       // Project: Visioneering (2011 – 2012)
       new Paragraph({ style: "ProjectTitle", children: [new TextRun("Visioneering – EnOcean-Integration in DigitalSTROM")] }),
       new Paragraph({ style: "CompanyRole", children: [new TextRun("Visioneering AG | Softwareentwickler | 07/2011 – 10/2012")] }),
-      new Paragraph({ children: [new TextRun({ text: "Integration des EnOcean-Funkprotokolls in den DigitalSTROM-Server für erweiterte Sensorunterstützung.", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Entwicklung von Treibern für EnOcean-Sensoren (Temperatur, Bewegung, Fensterkontakte)", font: "Nunito", size: 20 })] }),
-      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Integration in die bestehende DigitalSTROM-Server-Architektur (C++/Python)", font: "Nunito", size: 20 })] }),
+      new Paragraph({ children: [new TextRun({ text: "Integration des EnOcean-Funkprotokolls in das DigitalSTROM-Ökosystem als Wrapper für virtuelle DigitalSTROM-Geräte.", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Protokoll-Integration: EnOcean-Sensoren als virtuelle DigitalSTROM-Geräte abgebildet", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Entwicklung eines virtuellen DSM (DigitalSTROM-Meter) zur Einbindung der EnOcean-Geräte ins DigitalSTROM-System", font: "Nunito", size: 20 })] }),
+      new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [new TextRun({ text: "Eigenständige Web-UI für Konfiguration und Verwaltung der EnOcean-Geräte", font: "Nunito", size: 20 })] }),
       new Paragraph({ spacing: { after: 40 }, children: [
         new TextRun({ text: "Tech: ", bold: true, color: BRAND.gray, font: "Nunito", size: 18 }),
-        new TextRun({ text: "C++, Python, EnOcean, DigitalSTROM", color: BRAND.gray, font: "Nunito", size: 18 })
+        new TextRun({ text: "C++, Python, JavaScript, HTML, EnOcean, DigitalSTROM", color: BRAND.gray, font: "Nunito", size: 18 })
       ]}),
 
-      // PAGE BREAK
-      new Paragraph({ children: [new PageBreak()] }),
-
       // === ANSTELLUNGEN ===
+      new Paragraph({ children: [new PageBreak()] }),
       new Paragraph({ style: "SectionHeader", children: [new TextRun("Anstellungen")] }),
       new Table({
         columnWidths: [2000, 8000],
@@ -498,20 +505,11 @@ const doc = new Document({
           ]}),
           new TableRow({ children: [
             new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ children: [new TextRun({ text: "2017", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+              new Paragraph({ children: [new TextRun({ text: "2015 – 2017", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
-              new Paragraph({ children: [new TextRun({ text: "Dozent – Internet of Things", bold: true, font: "Nunito" })] }),
-              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen, Masterstudiengänge", color: BRAND.accent, font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ children: [new TextRun({ text: "2015 – 2016", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
-              new Paragraph({ children: [new TextRun({ text: "Akademischer Mitarbeiter (Promotion)", bold: true, font: "Nunito" })] }),
-              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen (Teilzeit)", color: BRAND.accent, font: "Nunito", size: 20 })] })
+              new Paragraph({ children: [new TextRun({ text: "Akademischer Mitarbeiter & Dozent (Teilzeit)", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen", color: BRAND.accent, font: "Nunito", size: 20 })] })
             ]})
           ]}),
           new TableRow({ children: [
@@ -521,6 +519,24 @@ const doc = new Document({
             new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
               new Paragraph({ children: [new TextRun({ text: "Softwareentwickler Praktikant", bold: true, font: "Nunito" })] }),
               new Paragraph({ children: [new TextRun({ text: "Volkswagen de México", color: BRAND.accent, font: "Nunito", size: 20 })] })
+            ]})
+          ]}),
+          new TableRow({ children: [
+            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "2009 – 2012", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+            ]}),
+            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "Netzwerkadministrator (ehrenamtlich)", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "Studentenwerk Freiburg, Furtwangen", color: BRAND.accent, font: "Nunito", size: 20 })] })
+            ]})
+          ]}),
+          new TableRow({ children: [
+            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "2009 – 2010", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+            ]}),
+            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "Softwareentwickler (studentische Hilfskraft)", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "IT-Rechenzentrum Furtwangen", color: BRAND.accent, font: "Nunito", size: 20 })] })
             ]})
           ]})
         ]
@@ -536,9 +552,9 @@ const doc = new Document({
               new Paragraph({ children: [new TextRun({ text: "2014", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
-              new Paragraph({ children: [new TextRun({ text: "Master of Science – Informatik (Note: 1,0)", bold: true, font: "Nunito" })] }),
-              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen", color: BRAND.gray, font: "Nunito", size: 20 })] }),
-              new Paragraph({ children: [new TextRun({ text: "Thesis: Koordination und Kombination heterogener Technologien im Kontext von Smart Home", italics: true, color: BRAND.gray, font: "Nunito", size: 18 })] })
+              new Paragraph({ children: [new TextRun({ text: "Master of Science – Informatik", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen", color: BRAND.accent, font: "Nunito", size: 20 })] }),
+              new Paragraph({ children: [new TextRun({ text: "Thesis: Koordination und Kombination heterogener Technologien im Kontext von Smart Home (Note: 1,0)", italics: true, color: BRAND.gray, font: "Nunito", size: 18 })] })
             ]})
           ]}),
           new TableRow({ children: [
@@ -546,9 +562,9 @@ const doc = new Document({
               new Paragraph({ children: [new TextRun({ text: "2012", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
-              new Paragraph({ children: [new TextRun({ text: "Bachelor of Science – Informatik (Note: 1,3)", bold: true, font: "Nunito" })] }),
-              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen", color: BRAND.gray, font: "Nunito", size: 20 })] }),
-              new Paragraph({ children: [new TextRun({ text: "Thesis: Homogenisierung von Gebäudeautomatisierung über TCP/IP", italics: true, color: BRAND.gray, font: "Nunito", size: 18 })] })
+              new Paragraph({ children: [new TextRun({ text: "Bachelor of Science – Informatik", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "Hochschule Furtwangen", color: BRAND.accent, font: "Nunito", size: 20 })] }),
+              new Paragraph({ children: [new TextRun({ text: "Thesis: Homogenisierung von Gebäudeautomatisierung über TCP/IP (Note: 1,3)", italics: true, color: BRAND.gray, font: "Nunito", size: 18 })] })
             ]})
           ]})
         ]
@@ -556,117 +572,50 @@ const doc = new Document({
 
       // === ZERTIFIKATE ===
       new Paragraph({ style: "SectionHeader", children: [new TextRun("Zertifikate & Publikationen")] }),
-      new Paragraph({ numbering: { reference: "skills-bullets", level: 0 }, children: [
-        new TextRun({ text: "ITIL Version 2 Foundation Examination", bold: true, font: "Nunito" }),
-        new TextRun({ text: " (2010)", color: BRAND.gray, font: "Nunito" })
-      ]}),
-      new Paragraph({ numbering: { reference: "skills-bullets", level: 0 }, children: [
-        new TextRun({ text: "Peer-reviewed Publikation: ", bold: true, font: "Nunito" }),
-        new TextRun({ text: "\"Untersuchung des Peer-to-Peer Web-Standards WebRTC\" – InformatikJournal 2013", italics: true, font: "Nunito", size: 20 })
-      ]}),
-
-      // === TECHNISCHE FÄHIGKEITEN ===
-      new Paragraph({ style: "SectionHeader", children: [new TextRun("Technische Fähigkeiten")] }),
       new Table({
-        width: { size: 100, type: WidthType.PERCENTAGE },
-        columnWidths: [2800, 7200],
+        columnWidths: [2000, 8000],
         rows: [
           new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Programmierung", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "2013", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
             ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Java, Python, C, TypeScript/JavaScript, C++, Bash", font: "Nunito", size: 20 })] })
+            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "Peer-reviewed Publikation – Untersuchung des Peer-to-Peer Web-Standards WebRTC", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "InformatikJournal (2013), Hochschule Furtwangen, pp. 23-32. ISBN: 978-3-00-0443221-3", color: BRAND.gray, font: "Nunito", size: 20 })] })
             ]})
           ]}),
           new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Frameworks", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "2010", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
             ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Spring Boot, Angular, Flask, OSGi, Hibernate, JUnit, JPA", font: "Nunito", size: 20 })] })
+            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "ITIL Version 2 Foundation Examination", bold: true, font: "Nunito" })] })
+            ]})
+          ]})
+        ]
+      }),
+
+      // === AUSZEICHNUNGEN ===
+      new Paragraph({ style: "SectionHeader", children: [new TextRun("Auszeichnungen")] }),
+      new Table({
+        columnWidths: [2000, 8000],
+        rows: [
+          new TableRow({ children: [
+            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "2014", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+            ]}),
+            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "Baden-Württemberg Goes Mobile – Gewinner", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "Kategorie: Mobile Housemate 2.0", color: BRAND.gray, font: "Nunito", size: 20 })] })
             ]})
           ]}),
           new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Cloud & Infrastruktur", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
+            new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "2013", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
             ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "AWS, Docker, Kubernetes, Linux, Yocto/OpenEmbedded", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "DevOps & Tools", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Git, Jenkins, CI/CD Pipelines, Atlassian Suite (Jira/Confluence)", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Datenbanken", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "MySQL, Oracle SQL, PostgreSQL, Redis, MongoDB", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Architektur & Design", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Domain-Driven Design, Microservices, Event-Driven Architecture", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Protokolle & APIs", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "REST, SOAP, GraphQL, Swagger/OpenAPI, MQTT, WebSocket", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Observability", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Grafana, Prometheus, ELK Stack, Application Logging", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Security", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "OAuth2, TLS/SSL, LDAP, Identity Provider Integration", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Methodik", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA },
-              shading: { fill: BRAND.lightGray, type: ShadingType.CLEAR }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Scrum, Kanban, Requirements Engineering, Code Review", font: "Nunito", size: 20 })] })
-            ]})
-          ]}),
-          new TableRow({ children: [
-            new TableCell({ borders: noBorders, width: { size: 2800, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "Domänen", bold: true, color: BRAND.primary, font: "Nunito", size: 20 })] })
-            ]}),
-            new TableCell({ borders: noBorders, width: { size: 7200, type: WidthType.DXA }, children: [
-              new Paragraph({ spacing: { before: 40, after: 40 }, children: [new TextRun({ text: "IoT, Smart Home, Embedded Systems, Linux-Treiber, Enterprise-Software, Automotive", font: "Nunito", size: 20 })] })
+            new TableCell({ borders: noBorders, width: { size: 8000, type: WidthType.DXA }, children: [
+              new Paragraph({ children: [new TextRun({ text: "Elevator Pitch BW Regionalcup – Gewinner", bold: true, font: "Nunito" })] }),
+              new Paragraph({ children: [new TextRun({ text: "Region Südschwarzwald", color: BRAND.gray, font: "Nunito", size: 20 })] })
             ]})
           ]})
         ]
@@ -679,30 +628,28 @@ const doc = new Document({
         rows: [
           new TableRow({ children: [
             new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Deutsch", bold: true, font: "Nunito" })] }),
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Muttersprache", color: BRAND.accent, font: "Nunito", size: 20 })] })
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Deutsch", bold: true, font: "Nunito" })] }),
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Muttersprache", color: BRAND.accent, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Englisch", bold: true, font: "Nunito" })] }),
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Fließend", color: BRAND.accent, font: "Nunito", size: 20 })] })
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Englisch", bold: true, font: "Nunito" })] }),
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Fließend", color: BRAND.accent, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Spanisch", bold: true, font: "Nunito" })] }),
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Fließend", color: BRAND.accent, font: "Nunito", size: 20 })] })
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Spanisch", bold: true, font: "Nunito" })] }),
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Fließend", color: BRAND.accent, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Portugiesisch", bold: true, font: "Nunito" })] }),
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Mittelstufe", color: BRAND.accent, font: "Nunito", size: 20 })] })
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Portugiesisch", bold: true, font: "Nunito" })] }),
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Mittelstufe", color: BRAND.accent, font: "Nunito", size: 20 })] })
             ]}),
             new TableCell({ borders: noBorders, width: { size: 2000, type: WidthType.DXA }, children: [
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Französisch", bold: true, font: "Nunito" })] }),
-              new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Grundkenntnisse", color: BRAND.gray, font: "Nunito", size: 20 })] })
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Französisch", bold: true, font: "Nunito" })] }),
+              new Paragraph({ alignment: AlignmentType.LEFT, children: [new TextRun({ text: "Grundkenntnisse", color: BRAND.gray, font: "Nunito", size: 20 })] })
             ]})
           ]})
         ]
-      }),
-
-      new Paragraph({ spacing: { before: 300 }, children: [] })
+      })
     ]
   }]
 });

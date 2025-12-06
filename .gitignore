@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Temporary Word files
+~$*.docx
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Old/deprecated CV files
+TD_Daniel_Deusing_2025.docx
+TD_Daniel_Deusing.docx
