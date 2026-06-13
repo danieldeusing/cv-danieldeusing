@@ -21,17 +21,22 @@
     ],
     "overviewNote": {
       "prefix": "Eine vollständige Projektübersicht befindet sich derzeit im Aufbau unter ",
-      "linkText": "twiced-homepage.daniel-deusing.workers.dev",
-      "url": "https://twiced-homepage.daniel-deusing.workers.dev/",
+      "linkText": "danieldeusing.de",
+      "url": "https://danieldeusing.de/",
       "suffix": "."
     }
   },
   "profile": [
     [
       { "text": "Ergebnisorientierter Software-Ingenieur mit " },
-      { "text": "über 13 Jahren Erfahrung", "bold": true },
+      { "text": "über 15 Jahren Erfahrung", "bold": true },
       { "text": " in Full-Stack-Entwicklung, IoT, Embedded Systems und Enterprise-Software. Nachgewiesene Erfolge in der Leitung von Entwicklungsteams und Bereitstellung missionskritischer Systeme für Automobil-, Verteidigungs- und Industriekunden. Stark im systematischen Debugging und der Root-Cause-Analyse komplexer Probleme. Erfahren im Code-Review mit Fokus auf Wissenstransfer und Teamentwicklung. Kombiniert technische Hands-on-Expertise mit Führungskompetenz – von der Architekturplanung über die Implementierung bis zum Produktivbetrieb. Kommunikationsstark in Deutsch, Englisch und Spanisch. Erfahrung in agilen, verteilten Teams und internationalen Projekten." }
     ]
+  ],
+  "strengths": [
+    { "title": "Schnelles Debugging in der Produktion", "text": "Als Unternehmensgründer habe ich immer wieder dringende Produktionsfehler selbst verantwortet – das schult darin, Probleme schnell einzugrenzen und zu beheben, oft in fremdem Code." },
+    { "title": "Mentoring & beidseitiger Wissenstransfer", "text": "Ich gebe mein Wissen gerne an junge Entwickler weiter – und schätze, wie viel auch erfahrene Entwickler von der frischen Sichtweise der Jüngeren lernen, wenn sie nicht arrogant sind." },
+    { "title": "KI-gestützte Entwicklung", "text": "Seit drei Jahren tief in der Entwicklung mit KI – nicht nur das Programmieren mit KI, sondern ihre Konfiguration für hochwertige, kosteneffiziente Ergebnisse, während Architektur und Urteilsvermögen beim Menschen bleiben: Konzepte vor reiner Syntax." }
   ],
   "skills": [
     { "category": "Programmierung", "items": ["Java", "Python", "C", "TypeScript/JavaScript", "C++", "Bash"] },
@@ -341,6 +346,7 @@
     "sections": {
       "profile": "Mitarbeiterprofil",
       "profilePersonal": "Profil",
+      "strengths": "Kernkompetenzen",
       "skills": "Technische Fähigkeiten",
       "projects": "Ausgewählte Projekte",
       "employment": "Anstellungen",

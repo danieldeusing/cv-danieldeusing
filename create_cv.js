@@ -4,10 +4,19 @@ const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
 const fs = require('fs');
 const path = require('path');
 
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'cv.es.json'), 'utf8'));
+// Usage: node create_cv.js <de|en|es|pt> [--personal]
+const LANGUAGES = ['de', 'en', 'es', 'pt'];
+const lang = process.argv[2];
+if (!LANGUAGES.includes(lang)) {
+  console.error(`Usage: node create_cv.js <${LANGUAGES.join('|')}> [--personal]`);
+  process.exit(1);
+}
+const LANG = lang.toUpperCase();
 
 // --personal: no twiceD branding/intro, output Daniel_Deusing_*.docx
 const personal = process.argv.includes('--personal');
+
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', `cv.${lang}.json`), 'utf8'));
 
 // twiceD Brand Colors
 const BRAND = {
@@ -56,6 +65,13 @@ const projectBlocks = data.projects.flatMap(project => [
     new TextRun({ text: project.technologies.join(", "), color: BRAND.gray, font: "Nunito", size: 18 })
   ]})
 ]);
+
+const strengthBlocks = data.strengths.map(strength =>
+  new Paragraph({ numbering: { reference: "project-bullets", level: 0 }, children: [
+    new TextRun({ text: `${strength.title} – `, bold: true, color: BRAND.primary, font: "Nunito", size: 20 }),
+    new TextRun({ text: strength.text, font: "Nunito", size: 20 })
+  ]})
+);
 
 const employmentRows = data.employment.map(job =>
   new TableRow({ children: [
@@ -139,9 +155,6 @@ const doc = new Document({
   },
   numbering: {
     config: [
-      { reference: "skills-bullets",
-        levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT,
-          style: { paragraph: { indent: { left: 360, hanging: 200 } } } }] },
       { reference: "project-bullets",
         levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT,
           style: { paragraph: { indent: { left: 360, hanging: 200 } } } }] }
@@ -231,13 +244,17 @@ const doc = new Document({
         ]})
       ]),
 
-      // === EMPLOYEE PROFILE ===
+      // === PROFILE ===
       new Paragraph({ style: "SectionHeader", children: [new TextRun(personal ? data.labels.sections.profilePersonal : data.labels.sections.profile)] }),
       ...data.profile.map(runs => new Paragraph({
         children: runs.map(run => new TextRun({ text: run.text, bold: run.bold, font: "Nunito" }))
       })),
 
-      // === TECHNICAL SKILLS (moved to first page) ===
+      // === KEY STRENGTHS ===
+      new Paragraph({ style: "SectionHeader", children: [new TextRun(data.labels.sections.strengths)] }),
+      ...strengthBlocks,
+
+      // === TECHNICAL SKILLS ===
       new Paragraph({ style: "SectionHeader", children: [new TextRun(data.labels.sections.skills)] }),
       new Table({
         width: { size: 100, type: WidthType.PERCENTAGE },
@@ -292,8 +309,8 @@ const doc = new Document({
   }]
 });
 
-const outputFile = personal ? "Daniel_Deusing_ES.docx" : "TD_Daniel_Deusing_ES.docx";
+const outputFile = `${personal ? "" : "TD_"}Daniel_Deusing_${LANG}.docx`;
 Packer.toBuffer(doc).then(buffer => {
-  fs.writeFileSync(outputFile, buffer);
-  console.log(`Spanish CV created: ${outputFile}`);
+  fs.writeFileSync(path.join(__dirname, outputFile), buffer);
+  console.log(`${LANG} CV created: ${outputFile}`);
 });

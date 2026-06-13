@@ -21,17 +21,22 @@
     ],
     "overviewNote": {
       "prefix": "A complete project overview is currently being developed at ",
-      "linkText": "twiced-homepage.daniel-deusing.workers.dev",
-      "url": "https://twiced-homepage.daniel-deusing.workers.dev/",
+      "linkText": "danieldeusing.de",
+      "url": "https://danieldeusing.de/",
       "suffix": "."
     }
   },
   "profile": [
     [
       { "text": "Results-driven software engineer with " },
-      { "text": "13+ years of experience", "bold": true },
+      { "text": "15+ years of experience", "bold": true },
       { "text": " in full-stack development, IoT, embedded systems, and enterprise software. Proven track record leading development teams and delivering mission-critical systems for automotive, defense, and industrial clients. Excels at systematic debugging and root cause analysis of complex problems. Experienced in code review with focus on knowledge transfer and team development. Combines hands-on technical expertise with leadership skills – from architecture planning through implementation to production operations. Strong communication skills in German, English, and Spanish. Experienced in agile, distributed teams and international projects." }
     ]
+  ],
+  "strengths": [
+    { "title": "Rapid production debugging", "text": "As a company founder I've repeatedly owned urgent production fixes, which trained me to pinpoint and resolve issues fast – often in code I didn't write." },
+    { "title": "Mentoring & two-way knowledge transfer", "text": "I enjoy growing junior engineers, and value how seniors who stay humble learn just as much from a junior's fresh perspective." },
+    { "title": "AI-augmented engineering", "text": "Three years deep in developing with AI – not just coding with it, but configuring it for high-quality, cost-efficient output, while keeping architecture and judgment human-led: concepts over rote syntax." }
   ],
   "skills": [
     { "category": "Programming", "items": ["Java", "Python", "C", "TypeScript/JavaScript", "C++", "Bash"] },
@@ -341,6 +346,7 @@
     "sections": {
       "profile": "Employee Profile",
       "profilePersonal": "Profile",
+      "strengths": "Key Strengths",
       "skills": "Technical Skills",
       "projects": "Selected Projects",
       "employment": "Employment",

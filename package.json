@@ -1,6 +1,13 @@
 {
+  "name": "cv-danieldeusing",
+  "version": "1.0.0",
+  "description": "Generates Daniel Deusing's CV as DOCX/PDF in four languages, twiceD-branded and personal variants.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "./generate_all.sh"
+  },
   "dependencies": {
-    "docx": "^9.5.1",
-    "sharp": "^0.34.5"
+    "docx": "^9.5.1"
   }
 }

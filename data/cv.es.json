@@ -21,17 +21,22 @@
     ],
     "overviewNote": {
       "prefix": "Un panorama completo de proyectos se encuentra actualmente en desarrollo en ",
-      "linkText": "twiced-homepage.daniel-deusing.workers.dev",
-      "url": "https://twiced-homepage.daniel-deusing.workers.dev/",
+      "linkText": "danieldeusing.de",
+      "url": "https://danieldeusing.de/",
       "suffix": "."
     }
   },
   "profile": [
     [
       { "text": "Ingeniero de software orientado a resultados con " },
-      { "text": "más de 13 años de experiencia", "bold": true },
+      { "text": "más de 15 años de experiencia", "bold": true },
       { "text": " en desarrollo full-stack, IoT, sistemas embebidos y software empresarial. Historial comprobado liderando equipos de desarrollo y entregando sistemas de misión crítica para clientes de los sectores automotriz, de defensa e industrial. Destaca en la depuración sistemática y el análisis de causa raíz de problemas complejos. Experiencia en revisión de código con enfoque en la transferencia de conocimiento y el desarrollo del equipo. Combina experiencia técnica práctica con habilidades de liderazgo: desde la planeación de la arquitectura, pasando por la implementación, hasta la operación en producción. Sólidas habilidades de comunicación en alemán, inglés y español. Experiencia en equipos ágiles y distribuidos y en proyectos internacionales." }
     ]
+  ],
+  "strengths": [
+    { "title": "Depuración rápida en producción", "text": "Como fundador de la empresa he asumido repetidamente correcciones urgentes en producción, lo que me entrenó para localizar y resolver problemas con rapidez, a menudo en código que no escribí." },
+    { "title": "Mentoría y transferencia de conocimiento en ambos sentidos", "text": "Disfruto haciendo crecer a desarrolladores junior, y valoro cuánto aprenden también los senior humildes de la perspectiva fresca de un junior." },
+    { "title": "Ingeniería potenciada por IA", "text": "Tres años en profundidad desarrollando con IA: no solo programar con ella, sino configurarla para obtener resultados de alta calidad y rentables, manteniendo la arquitectura y el criterio en manos humanas: los conceptos por encima de la sintaxis." }
   ],
   "skills": [
     { "category": "Programación", "items": ["Java", "Python", "C", "TypeScript/JavaScript", "C++", "Bash"] },
@@ -341,6 +346,7 @@
     "sections": {
       "profile": "Perfil del Empleado",
       "profilePersonal": "Perfil",
+      "strengths": "Fortalezas Clave",
       "skills": "Habilidades Técnicas",
       "projects": "Proyectos Seleccionados",
       "employment": "Experiencia Laboral",
