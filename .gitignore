@@ -14,3 +14,6 @@ node_modules/
 # Old/deprecated CV files
 TD_Daniel_Deusing_2025.docx
 TD_Daniel_Deusing.docx
+
+# Claude Code local settings
+.claude/settings.local.json
