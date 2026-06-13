@@ -1,0 +1,353 @@
+{
+  "language": "pt",
+  "person": {
+    "name": "Daniel Deusing",
+    "title": "Diretor Executivo & Engenheiro de Software Sênior",
+    "location": "Ribeirão Claro, Brasil",
+    "socials": [
+      { "network": "GitHub", "url": "https://github.com/danieldeusing/", "icon": "github_icon.png" },
+      { "network": "LinkedIn", "url": "https://www.linkedin.com/in/daniel-deusing-6859b987/", "icon": "linkedin_icon.png" },
+      { "network": "Xing", "url": "https://www.xing.com/profile/Daniel_Deusing/", "icon": "xing_icon.png" }
+    ]
+  },
+  "company": {
+    "name": "twiceD Technology GmbH",
+    "brandName": "twiceD",
+    "brandSuffix": " Technology GmbH",
+    "email": "info@twiced.de",
+    "phone": "+49-151-16545891",
+    "intro": [
+      "A twiceD Technology GmbH é uma empresa de software com sede na Alemanha, especializada em soluções de desenvolvimento sob medida para a indústria e o setor corporativo. Realizamos projetos completos ou apoiamos as equipes dos nossos clientes com desenvolvedores experientes nas áreas de IoT, sistemas embarcados, software corporativo e desenvolvimento full-stack. O perfil a seguir apresenta um dos nossos especialistas."
+    ],
+    "overviewNote": {
+      "prefix": "Uma visão geral completa dos projetos está atualmente em desenvolvimento em ",
+      "linkText": "twiced-homepage.daniel-deusing.workers.dev",
+      "url": "https://twiced-homepage.daniel-deusing.workers.dev/",
+      "suffix": "."
+    }
+  },
+  "profile": [
+    [
+      { "text": "Engenheiro de software orientado a resultados com " },
+      { "text": "mais de 13 anos de experiência", "bold": true },
+      { "text": " em desenvolvimento full-stack, IoT, sistemas embarcados e software corporativo. Histórico comprovado liderando equipes de desenvolvimento e entregando sistemas de missão crítica para clientes dos setores automotivo, de defesa e industrial. Destaque em depuração sistemática e análise de causa raiz de problemas complexos. Experiência em revisão de código com foco em transferência de conhecimento e desenvolvimento da equipe. Combina expertise técnica hands-on com habilidades de liderança – do planejamento da arquitetura, passando pela implementação, até a operação em produção. Ótima comunicação em alemão, inglês e espanhol. Experiência em equipes ágeis e distribuídas e em projetos internacionais." }
+    ]
+  ],
+  "skills": [
+    { "category": "Programação", "items": ["Java", "Python", "C", "TypeScript/JavaScript", "C++", "Bash"] },
+    { "category": "Frameworks", "items": ["Spring Boot", "Angular", "Flask", "OSGi", "Hibernate", "JUnit", "JPA"] },
+    { "category": "Cloud & Infraestrutura", "items": ["AWS", "Docker", "Linux", "Yocto/OpenEmbedded"] },
+    { "category": "DevOps & Ferramentas", "items": ["Git", "Jenkins", "CI/CD Pipelines", "Atlassian Suite (Jira/Confluence)"] },
+    { "category": "Bancos de Dados", "items": ["MySQL", "Oracle SQL", "PostgreSQL", "Redis", "MongoDB"] },
+    { "category": "Arquitetura & Design", "items": ["Domain-Driven Design", "Microservices", "Event-Driven Architecture"] },
+    { "category": "Protocolos & APIs", "items": ["REST", "SOAP", "Swagger/OpenAPI", "MQTT", "WebSocket"] },
+    { "category": "Observabilidade", "items": ["Grafana", "Prometheus", "ELK Stack", "Application Logging"] },
+    { "category": "Segurança", "items": ["OAuth2", "TLS/SSL", "LDAP", "Identity Provider Integration"] },
+    { "category": "Metodologia", "items": ["Scrum", "Kanban", "Test Driven Development", "Requirements Engineering", "Code Review"] },
+    { "category": "Domínios", "items": ["IoT", "Smart Home", "Embedded Systems", "Linux Drivers", "Enterprise Software", "Automotive"] }
+  ],
+  "projectsNote": "Os projetos a seguir compreendem exclusivamente atividades de desenvolvimento. Atividades em funções de liderança não estão listadas.",
+  "projectsNotePersonal": "Os projetos a seguir compreendem exclusivamente atividades de desenvolvimento próprias. Não estão listados os projetos da twiceD Technology GmbH realizados por colaboradores, que liderei sem participar ativamente do desenvolvimento.",
+  "projects": [
+    {
+      "title": "LiMAPS – Plataforma de Análise de Medições em Tempo Real",
+      "client": "LITEF GmbH (Northrop Grumman)",
+      "role": "Desenvolvedor Líder & Líder de Equipe",
+      "from": "2022",
+      "to": "atualmente",
+      "description": "Liderança do desenvolvimento de um sistema de análise de medições em tempo real para sistemas de navegação inercial.",
+      "bullets": [
+        "Arquitetura do pipeline de dados em tempo real, do ring buffer em memória compartilhada ao frontend web",
+        "Liderança de uma equipe de 4 desenvolvedores; também implantado no LiRED (plataforma relacionada)",
+        "Integração de uma biblioteca em C da LITEF para acesso de alto desempenho à memória compartilhada",
+        "Manutenção contínua: atualizações de segurança, otimizações de desempenho e correção de bugs"
+      ],
+      "technologies": ["Angular", "Python", "C", "Shared Memory", "Real-Time Systems"]
+    },
+    {
+      "title": "VU3 – Plataforma Corporativa de Vendas de Veículos (Volkswagen Group)",
+      "client": "Cloudflight GmbH / Porsche Informatik GmbH",
+      "role": "Desenvolvedor de Software & Arquiteto",
+      "from": "2021",
+      "to": "atualmente",
+      "description": "Contribuição para a plataforma central de vendas do Grupo VW, que atende concessionárias em mais de 28 países para as marcas Audi, VW, Skoda, Seat, Cupra e Porsche.",
+      "bullets": [
+        "2 anos na equipe SFO1: Stocklist, Add-Ons, Buildability & Actuality Check, Salesperson Management, Performance Board, Vehicle Management, Contract Broker, Sales Folder",
+        "Mais de 2 anos na equipe SFO4 (em andamento): Multi-Currency, Special Tax, Porsche Vehicle Integration, DocFlow Integration, Selections, Datahub",
+        "Mais de ½ ano na equipe SWP (em andamento): aplicação legada de vendas na Itália – correção de bugs, funcionalidades de segurança e regulatórias, manutenção até a migração em 2027",
+        "Mais de 2 anos no Technical Architecture Team (em andamento): equipe interdomínios que define a arquitetura geral do sistema"
+      ],
+      "technologies": ["Angular", "Java", "Spring Boot", "Oracle SQL", "Redis", "Solr", "SOAP", "REST API", "AWS"]
+    },
+    {
+      "title": "Driver Linux GigE Vision – Interface de Câmera de Alta Velocidade",
+      "client": "PLC2 Design GmbH / Mercedes-Benz & Bosch",
+      "role": "Desenvolvedor Líder",
+      "from": "2021",
+      "to": "2023",
+      "description": "Desenvolvimento de um driver de alto desempenho para o kernel Linux destinado a sistemas de câmeras industriais usados na produção automotiva.",
+      "bullets": [
+        "Throughput de 40 Gbit/s sem perda de pacotes e com uso mínimo de CPU",
+        "Implementação de um driver em espaço de kernel com transferência de dados otimizada do kernel para o espaço de usuário",
+        "Colaboração com a equipe de hardware/FPGA da PLC2 e mais de 20 engenheiros da Mercedes/Bosch"
+      ],
+      "technologies": ["C", "Linux Kernel", "GigE Vision"]
+    },
+    {
+      "title": "IHK eFaktura – Gestão Eletrônica de Faturas",
+      "client": "IHK Schwaben",
+      "role": "Líder de Equipe & Desenvolvedor",
+      "from": "2020",
+      "to": "atualmente",
+      "description": "Liderança do desenvolvimento de um sistema de faturamento eletrônico para as empresas associadas à IHK.",
+      "bullets": [
+        "Liderança de uma equipe de 3 desenvolvedores na gestão de faturas e na integração SOAP",
+        "Integração com a infraestrutura backend existente da IHK para troca de dados transparente",
+        "Manutenção contínua: atualizações de segurança, otimizações de desempenho e correção de bugs"
+      ],
+      "technologies": ["Angular", "Java", "Spring Boot", "MySQL", "SOAP"]
+    },
+    {
+      "title": "IHK Themen – Gestão de Temas de Exame",
+      "client": "IHK Schwaben",
+      "role": "Líder de Equipe & Desenvolvedor",
+      "from": "2020",
+      "to": "atualmente",
+      "description": "Liderança do desenvolvimento de uma plataforma de submissão e gestão de temas para exames de formação profissional.",
+      "bullets": [
+        "Construção do fluxo completo de submissão, revisão e aprovação de temas de exame",
+        "Compartilha a infraestrutura backend com o eFaktura; frontend Angular personalizado",
+        "Manutenção contínua: atualizações de segurança, otimizações de desempenho e correção de bugs"
+      ],
+      "technologies": ["Angular", "Java", "Spring Boot", "MySQL", "SOAP"]
+    },
+    {
+      "title": "LiPAD – App Portátil de Alinhamento de Precisão",
+      "client": "LITEF GmbH (Northrop Grumman)",
+      "role": "Desenvolvedor",
+      "from": "2020",
+      "to": "atualmente",
+      "description": "App Android nativo para um dispositivo portátil de medição inercial usado em levantamentos de precisão (p. ex., perfuração de petróleo).",
+      "bullets": [
+        "Desenvolvimento de um app Android completo com visualização 3D da orientação em tempo real (pitch, roll, azimute)",
+        "Implementação de conectividade Bluetooth LE, gestão de projetos offline e exportação para CSV",
+        "Publicado no Google Play; manutenção contínua com atualizações de segurança e de funcionalidades"
+      ],
+      "technologies": ["Android", "Java", "Bluetooth LE"]
+    },
+    {
+      "title": "PGC-1000 – Software para Placa de Captura de Alta Velocidade",
+      "client": "PLC2 Design GmbH",
+      "role": "Desenvolvedor",
+      "from": "2020",
+      "to": null,
+      "description": "Desenvolvimento de software para uma placa de captura baseada em PCIe usada na aquisição de dados automotivos.",
+      "bullets": [
+        "Adaptação do driver GigE Vision existente (do projeto Athena/Mercedes) para o hardware PGC-1000",
+        "Desenvolvimento da aplicação de controle em Qt para configuração de captura, monitoramento de streams e conversão de imagens",
+        "Throughput de 40 Gbit/s com ~0% de carga de CPU por meio de transferências DMA"
+      ],
+      "technologies": ["C", "Qt", "Linux", "PCIe", "DMA"]
+    },
+    {
+      "title": "Promonco – Gestão Corporativa de Projetos & Horas",
+      "client": "twiceD Technology GmbH",
+      "role": "Desenvolvedor Líder & Líder de Equipe",
+      "from": "2019",
+      "to": "atualmente",
+      "description": "Plataforma SaaS de desenvolvimento próprio para gestão de projetos, registro de horas e análise de negócios.",
+      "bullets": [
+        "Liderança de uma equipe central de 4 desenvolvedores (mais de 8 colaboradores no total) em uma plataforma full-stack",
+        "Implementação de integração LDAP, exportação para DATEV e migração de dados do MS Access",
+        "Implantada internamente nos escritórios da twiceD; clientes externos atendidos como SaaS",
+        "Manutenção contínua: atualizações de segurança, otimizações de desempenho e correção de bugs"
+      ],
+      "technologies": ["Java", "Spring Boot", "Angular", "MySQL", "Python", "Docker", "LDAP", "DATEV"]
+    },
+    {
+      "title": "FPGA Conference Europe – Sistema de Inscrição & Reservas",
+      "client": "PLC2 GmbH",
+      "role": "Desenvolvedor Backend",
+      "from": "2019",
+      "to": "2021",
+      "description": "Plataforma de inscrições para a principal conferência europeia de desenvolvedores FPGA (mais de 500 participantes).",
+      "bullets": [
+        "Desenvolvimento do backend em Spring Boot: fluxo de inscrição, reserva de sessões, processamento de pagamentos",
+        "Implementação de gestão de assentos em tempo real, tratamento de lista de espera e detecção de conflitos",
+        "A plataforma atendeu a conferência com sucesso por 3 anos consecutivos"
+      ],
+      "technologies": ["Java", "Spring Boot", "MySQL", "REST API"]
+    },
+    {
+      "title": "IHK Zeugnischeck – Portal de Verificação de Certificados",
+      "client": "IHK Schwaben / IHK München",
+      "role": "Desenvolvedor",
+      "from": "2019",
+      "to": "2020",
+      "description": "Desenvolvimento conjunto com a IHK München para a verificação digital de certificados de formação profissional.",
+      "bullets": [
+        "Construção de um sistema de verificação seguro para empregadores validarem certificados de formação profissional",
+        "Colaboração com a equipe de desenvolvimento da IHK München em uma arquitetura de plataforma compartilhada"
+      ],
+      "technologies": ["Angular", "Java", "Spring Boot", "MySQL"]
+    },
+    {
+      "title": "4NEEDS – Plataforma de ICO para Influenciadores",
+      "client": "4NEEDS",
+      "role": "Desenvolvedor Blockchain",
+      "from": "2018",
+      "to": null,
+      "description": "Desenvolvimento de uma plataforma de ICO para marketing de influenciadores baseada em tecnologia Blockchain.",
+      "bullets": [
+        "Desenvolvimento de smart contracts para emissão e negociação de tokens",
+        "Desenvolvimento full-stack: frontend em Angular, backend em Java, serviços em Python",
+        "Integração do SDK de Blockchain para gestão de carteiras e processamento de transações"
+      ],
+      "technologies": ["Blockchain", "Angular", "Java", "Python"]
+    },
+    {
+      "title": "Obsidian – Sistema Operacional Embarcado & Drivers",
+      "client": "PLC2 Design GmbH",
+      "role": "Desenvolvedor de Sistemas Embarcados",
+      "from": "2017",
+      "to": null,
+      "description": "Desenvolvimento de um sistema Linux embarcado completo para o hardware da PLC2, com bootloader, kernel e drivers.",
+      "bullets": [
+        "Imagem Linux baseada em Yocto com kernel personalizado e device tree para Xilinx Zynq",
+        "Desenvolvimento de drivers de kernel para comunicação com FPGA e interfaces de hardware",
+        "Configuração do bootloader (U-Boot) e otimização de boot para inicialização rápida do sistema"
+      ],
+      "technologies": ["Yocto", "C", "Python", "Linux Kernel", "U-Boot", "Device Tree"]
+    },
+    {
+      "title": "baseCON – Sistema de Smart Home & Moradia Assistida",
+      "client": "KUNDO xT GmbH",
+      "role": "Desenvolvedor & Arquiteto",
+      "from": "2015",
+      "to": "2017",
+      "description": "Coarquitetura de uma plataforma de smart home certificada Z-Wave para o cuidado de idosos, implantada em cooperativas habitacionais em toda a Alemanha.",
+      "bullets": [
+        "Corresponsável pelo design da arquitetura do sistema para um gateway Linux embarcado (RaspberryPi → ODROID-C2)",
+        "Desenvolvimento do backend principal em Java/OSGi: motor de regras, sistema de alarmes, integração com a nuvem via MQTT",
+        "Liderança da certificação Z-Wave do dispositivo companion de 4 botões; apoio na certificação do hub baseCON",
+        "Integração dos protocolos Z-Wave, HomeMatic, SML e M-Bus em uma camada de controle unificada"
+      ],
+      "technologies": ["Java", "OSGi", "Angular", "Python", "C", "MQTT", "Z-Wave", "Yocto"]
+    },
+    {
+      "title": "SafeGuard Solutions – Sistema Móvel de Emergência",
+      "client": "SafeGuard Solutions GmbH",
+      "role": "Desenvolvedor Android",
+      "from": "2015",
+      "to": "2017",
+      "description": "Desenvolvimento de um sistema móvel de emergência com beacons BLE para localização indoor de pessoas em situação de risco.",
+      "bullets": [
+        "App Android nativo com escaneamento de beacons Bluetooth LE e trilateração para posicionamento",
+        "Integração de notificações push e comunicação com o backend para alertas em tempo real",
+        "Otimização do consumo de energia para escaneamento BLE contínuo em segundo plano",
+        "Integração com sistemas externos para encaminhamento de alarmes e troca de dados"
+      ],
+      "technologies": ["Android", "Java", "Bluetooth LE", "REST API"]
+    },
+    {
+      "title": "Elaborated Networks – API JSON RESTful para WireGate",
+      "client": "Elaborated Networks GmbH",
+      "role": "Desenvolvedor Backend",
+      "from": "2014",
+      "to": "2015",
+      "description": "Desenvolvimento de uma API RESTful para o gateway de smart home WireGate, integrando diversos protocolos de automação predial.",
+      "bullets": [
+        "API REST baseada em JSON para controle e configuração de dispositivos KNX/EIB",
+        "Integração com o backend existente em Python do sistema WireGate"
+      ],
+      "technologies": ["Python", "REST API", "JSON", "KNX/EIB"]
+    },
+    {
+      "title": "myHOA – Startup de Smart Home",
+      "client": "Startup própria",
+      "role": "Cofundador",
+      "from": "2013",
+      "to": "2014",
+      "description": "Cofundação e liderança do desenvolvimento técnico de uma startup de smart home com gateway próprio e automação residencial integrada.",
+      "bullets": [
+        "Gateway Linux embarcado de desenvolvimento próprio (Yocto) com suporte a múltiplos protocolos (Z-Wave, EnOcean, DigitalSTROM, M-Bus, HomeMatic, ZigBee)",
+        "Desenvolvimento completo, da seleção de hardware ao app Android, passando pelo backend (foco: backend)"
+      ],
+      "technologies": ["Yocto", "C", "Python", "Android", "REST API"]
+    },
+    {
+      "title": "Visioneering – Integração do EnOcean no DigitalSTROM",
+      "client": "Visioneering AG",
+      "role": "Desenvolvedor de Software",
+      "from": "2011",
+      "to": "2012",
+      "description": "Integração do protocolo sem fio EnOcean ao ecossistema DigitalSTROM como wrapper para dispositivos virtuais DigitalSTROM.",
+      "bullets": [
+        "Integração de protocolos: sensores EnOcean mapeados como dispositivos virtuais DigitalSTROM",
+        "Desenvolvimento de um DSM virtual (DigitalSTROM-Meter) para integrar dispositivos EnOcean ao sistema DigitalSTROM",
+        "Interface web própria para configuração e gestão dos dispositivos EnOcean"
+      ],
+      "technologies": ["C++", "Python", "JavaScript", "HTML", "EnOcean", "DigitalSTROM"]
+    }
+  ],
+  "employment": [
+    { "from": "2018", "to": "atualmente", "role": "Diretor Executivo & Desenvolvedor de Software", "company": "twiceD Technology GmbH" },
+    { "from": "2015", "to": "2018", "role": "Diretor Executivo & Desenvolvedor de Software", "company": "Ingenieurbüro Deusing GbR" },
+    { "from": "2015", "to": "2017", "role": "Colaborador Acadêmico & Docente (meio período)", "company": "Hochschule Furtwangen" },
+    { "from": "2010", "to": null, "role": "Estagiário de Desenvolvimento de Software", "company": "Volkswagen de México" },
+    { "from": "2009", "to": "2012", "role": "Administrador de Redes (voluntário)", "company": "Studentenwerk Freiburg, Furtwangen" },
+    { "from": "2009", "to": "2010", "role": "Desenvolvedor de Software (assistente estudantil)", "company": "IT Data Center Furtwangen" }
+  ],
+  "education": [
+    {
+      "year": "2014",
+      "degree": "Master of Science – Ciência da Computação",
+      "institution": "Hochschule Furtwangen University",
+      "thesis": "Dissertação: Coordenação e combinação de tecnologias heterogêneas no contexto de Smart Home (Nota: 1,0)"
+    },
+    {
+      "year": "2012",
+      "degree": "Bachelor of Science – Ciência da Computação",
+      "institution": "Hochschule Furtwangen University",
+      "thesis": "Monografia: Homogeneização da automação predial via TCP/IP (Nota: 1,3)"
+    }
+  ],
+  "certificates": [
+    {
+      "year": "2013",
+      "title": "Publicação revisada por pares – Investigação do padrão web peer-to-peer WebRTC",
+      "details": "InformatikJournal (2013), Hochschule Furtwangen University, pp. 23-32. ISBN: 978-3-00-0443221-3"
+    },
+    {
+      "year": "2010",
+      "title": "ITIL Version 2 Foundation Examination",
+      "details": null
+    }
+  ],
+  "awards": [
+    { "year": "2014", "title": "Baden-Württemberg Goes Mobile – Vencedor", "details": "Categoria: Mobile Housemate 2.0" },
+    { "year": "2013", "title": "Elevator Pitch BW Regional Cup – Vencedor", "details": "Região de Südschwarzwald" }
+  ],
+  "languages": [
+    { "language": "Alemão", "level": "Nativo" },
+    { "language": "Inglês", "level": "Fluente" },
+    { "language": "Espanhol", "level": "Fluente" },
+    { "language": "Português", "level": "Intermediário" },
+    { "language": "Francês", "level": "Básico", "muted": true }
+  ],
+  "labels": {
+    "footerPagePrefix": "Página ",
+    "techPrefix": "Tech: ",
+    "sections": {
+      "profile": "Perfil do Colaborador",
+      "profilePersonal": "Perfil",
+      "skills": "Habilidades Técnicas",
+      "projects": "Projetos Selecionados",
+      "employment": "Experiência Profissional",
+      "education": "Formação Acadêmica",
+      "certificates": "Certificações & Publicações",
+      "awards": "Prêmios",
+      "languages": "Idiomas"
+    }
+  }
+}
