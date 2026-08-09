@@ -1,0 +1,42 @@
+name: rebuild-pagr
+
+# This repo holds the CV; danieldeusing.de PUBLISHES it. pagr's build fetches the PDFs and
+# data/cv.*.json from this repo's main at build time (its scripts/sync-content.mjs), so a
+# commit here changes nothing on the live site until pagr rebuilds. This workflow is what
+# makes that happen.
+#
+# It replaces a cv/.git/hooks/post-commit that pagr's README documented for years and that
+# existed on no machine: this repo had no local clone, no workflows and no secrets, so a
+# regenerated CV only ever reached the site when some unrelated pagr deploy happened to run.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Nothing here needs the automatic GITHUB_TOKEN: the dispatch below authenticates with its
+# own PAT, and this job reads nothing out of this repository.
+permissions: {}
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      # Deliberately NOT narrowed with a paths: filter. Getting such a filter wrong fails
+      # silently — a real CV change that never reaches the site — while the cost of omitting
+      # it is one unnecessary ~1 min deploy, on a repo that sees a handful of pushes a year.
+      # That trade only runs one way.
+      - name: Trigger the pagr deploy
+        env:
+          # Fine-grained PAT scoped to danieldeusing/pagr with Actions: write and nothing
+          # else: enough to start pagr's deploy workflow, not enough to read or write any
+          # code. The automatic GITHUB_TOKEN cannot do this — it is scoped to the repository
+          # it runs in and cannot trigger a workflow in another one.
+          GH_TOKEN: ${{ secrets.PAGR_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::PAGR_DISPATCH_TOKEN is not set — the new CV will not reach danieldeusing.de."
+            exit 1
+          fi
+          gh workflow run deploy.yml --repo danieldeusing/pagr --ref master
+          echo "Dispatched. The deploy reports its own success or failure here:"
+          echo "https://github.com/danieldeusing/pagr/actions/workflows/deploy.yml"
