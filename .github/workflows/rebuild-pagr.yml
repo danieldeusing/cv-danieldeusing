@@ -33,10 +33,12 @@ jobs:
       #
       # owner + repositories are REQUIRED, not decoration: without them the minted token is
       # scoped to THIS repository, and reaching another one is the entire job.
+      # client-id, not app-id: v3 deprecates app-id and warns on every run. The App's item in
+      # the vault carries both, so this costs nothing.
       - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ secrets.PAGR_APP_ID }}
+          client-id: ${{ secrets.PAGR_APP_CLIENT_ID }}
           private-key: ${{ secrets.PAGR_APP_PRIVATE_KEY }}
           owner: danieldeusing
           repositories: pagr
