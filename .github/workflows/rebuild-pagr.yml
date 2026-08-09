@@ -25,18 +25,26 @@ jobs:
       # silently — a real CV change that never reaches the site — while the cost of omitting
       # it is one unnecessary ~1 min deploy, on a repo that sees a handful of pushes a year.
       # That trade only runs one way.
+      # A GitHub App, not a PAT. The App mints a token that lives ONE HOUR, so this public
+      # repo holds no long-lived credential and there is no expiry date to remember — which
+      # is why this replaced PAGR_DISPATCH_TOKEN instead of making that PAT never-expire.
+      # The automatic GITHUB_TOKEN cannot stand in: it is scoped to the repository it runs
+      # in and cannot start a workflow in another one.
+      #
+      # owner + repositories are REQUIRED, not decoration: without them the minted token is
+      # scoped to THIS repository, and reaching another one is the entire job.
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          app-id: ${{ secrets.PAGR_APP_ID }}
+          private-key: ${{ secrets.PAGR_APP_PRIVATE_KEY }}
+          owner: danieldeusing
+          repositories: pagr
+
       - name: Trigger the pagr deploy
         env:
-          # Fine-grained PAT scoped to danieldeusing/pagr with Actions: write and nothing
-          # else: enough to start pagr's deploy workflow, not enough to read or write any
-          # code. The automatic GITHUB_TOKEN cannot do this — it is scoped to the repository
-          # it runs in and cannot trigger a workflow in another one.
-          GH_TOKEN: ${{ secrets.PAGR_DISPATCH_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          if [ -z "$GH_TOKEN" ]; then
-            echo "::error::PAGR_DISPATCH_TOKEN is not set — the new CV will not reach danieldeusing.de."
-            exit 1
-          fi
           gh workflow run deploy.yml --repo danieldeusing/pagr --ref master
           echo "Dispatched. The deploy reports its own success or failure here:"
           echo "https://github.com/danieldeusing/pagr/actions/workflows/deploy.yml"
