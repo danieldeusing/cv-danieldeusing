@@ -3,7 +3,7 @@
 Generates Daniel Deusing's CV as DOCX and PDF in four languages — German,
 English, Spanish, Portuguese — from one JSON file per language.
 
-![The English CV scrolling by: personal variant left, twiceD-branded variant right](docs/cv-preview.gif)
+<img src="docs/cv-preview.gif" width="100%" alt="The English CV scrolling by: personal variant left, twiceD-branded variant right">
 
 ## Quick Start
 
