@@ -10,6 +10,7 @@ npm install                       # once
 ./generate_all.sh                 # all 8 DOCX variants + PDF conversion
 node create_cv.js de              # single: twiceD German → TD_Daniel_Deusing_DE.docx
 node create_cv.js de --personal   # single: personal German → Daniel_Deusing_DE.docx
+(cd video && npm install && npm run render)   # README preview GIF → docs/cv-preview.gif (Remotion)
 ```
 
 PDF conversion needs LibreOffice (`brew install --cask libreoffice` → `soffice` on PATH).
