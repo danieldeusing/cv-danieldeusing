@@ -14,6 +14,8 @@ node create_cv.js de --personal   # single: personal German → Daniel_Deusing_D
 ```
 
 PDF conversion needs LibreOffice (`brew install --cask libreoffice` → `soffice` on PATH).
+LibreOffice 26.8 ignores macOS fonts: `generate_all.sh` copies Nunito into a temporary
+LibreOffice profile and fails if a PDF lacks Nunito (`pdffonts`, poppler). Do not convert with a bare `soffice`.
 
 ## Architecture
 

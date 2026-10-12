@@ -39,9 +39,15 @@ Each language builds two variants from the same content:
 
 ## PDF conversion
 
-`generate_all.sh` converts via LibreOffice headless, so `soffice` must be on
-your `PATH` (`brew install --cask libreoffice`). To convert a single file
-manually: `soffice --headless --convert-to pdf <file>.docx`.
+`generate_all.sh` converts via LibreOffice headless. It needs:
+
+- `soffice` on your `PATH` (`brew install --cask libreoffice`)
+- `pdffonts` from poppler (`brew install poppler`)
+- the Nunito font in `~/Library/Fonts` or `/Library/Fonts`
+
+LibreOffice 26.8 on macOS ignores the installed fonts, so the script hands
+Nunito to LibreOffice through a temporary profile. It stops when a PDF does
+not embed Nunito.
 
 ## Preview animation
 
