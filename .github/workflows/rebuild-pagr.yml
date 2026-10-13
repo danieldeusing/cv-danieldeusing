@@ -1,9 +1,10 @@
 name: rebuild-pagr
 
 # This repo holds the CV; danieldeusing.de PUBLISHES it. pagr's build fetches the PDFs and
-# data/cv.*.json from this repo's main at build time (its scripts/sync-content.mjs), so a
-# commit here changes nothing on the live site until pagr rebuilds. This workflow is what
-# makes that happen.
+# data/cv.*.json from this repo at build time (its scripts/sync-content.mjs), so a commit
+# here changes nothing on the live site until pagr rebuilds. This workflow is what makes
+# that happen, and it names the exact commit (cv_ref): raw.githubusercontent.com caches
+# `main` for up to 5 minutes, so a deploy started seconds after a push got the old PDFs.
 #
 # It replaces a cv/.git/hooks/post-commit that pagr's README documented for years and that
 # existed on no machine: this repo had no local clone, no workflows and no secrets, so a
@@ -47,6 +48,6 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          gh workflow run deploy.yml --repo danieldeusing/pagr --ref master
+          gh workflow run deploy.yml --repo danieldeusing/pagr --ref master -f cv_ref="$GITHUB_SHA"
           echo "Dispatched. The deploy reports its own success or failure here:"
           echo "https://github.com/danieldeusing/pagr/actions/workflows/deploy.yml"
